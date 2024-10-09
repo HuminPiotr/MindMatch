@@ -1,0 +1,71 @@
+.tile {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden; // Ukrywanie elementów wychodzących poza kafelek
+
+  &:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &.revealed {
+    transform: scale(1.1);
+  }
+
+  // Efekt błysku
+  &.revealed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; // Start poza lewą stroną kafelka
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease-in-out;
+    animation: shine 1s forwards; // Animacja błysku po odsłonięciu
+  }
+
+  img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 90px;
+    font-size: 35px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+  }
+}
+
+// Definicja animacji shine
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 150%; // Koniec poza prawą stroną kafelka
+  }
+}
+
+

@@ -1,0 +1,43 @@
+.game-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  
+    p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+  
+      &:first-of-type {
+        color: #ff7e5f; /* Kolor dla liczby prób */
+      }
+  
+      &:last-of-type {
+        color: #2196f3; /* Kolor dla czasu gry */
+      }
+    }
+  
+    @media (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1.5rem;
+  
+      p {
+        margin: 0 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  
+    @media (min-width: 1024px) {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  

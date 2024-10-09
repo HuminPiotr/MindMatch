@@ -1,0 +1,31 @@
+.game-history {
+  margin-top: 20px;
+  padding: 1rem 1.6rem;
+  background: #7f8ea7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .last-game-entry {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: black;
+
+    span {
+      margin-bottom: 5px;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+  }
+}

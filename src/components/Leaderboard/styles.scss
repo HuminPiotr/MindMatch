@@ -1,0 +1,43 @@
+.leaderboard {
+  margin-top: 20px;
+  padding: 1rem 1.6rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #0000001a;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .game-entry {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      gap: 24px;
+      justify-content: space-between;
+      font-size: 1rem;
+      color: black;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      @media (max-width: 480px) {
+        gap: 16px;
+        font-size: 14px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: black;
+      text-align: center;
+    }
+  }
+}
